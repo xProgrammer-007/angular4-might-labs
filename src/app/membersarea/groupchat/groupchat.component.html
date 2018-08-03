@@ -1,0 +1,41 @@
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Live Chat </h4>
+                        <p class="category">Talk with Friends</p>
+                    </div>
+                    <div class="card-content">
+                      <div class="message-contents">
+                        <ul *ngFor="let message of (messages | async | reverse)">
+                          <li>
+                            <div class="content">
+                              <img class="img-circle" style="" [src]="message.photo ||'../../assets/img/user.png'" />
+                              <span>{{message.name}}</span>
+                              <span id="time">{{message.time | date: 'shortTime'}}</span>
+                              <p>{{ message.msg}}</p>
+                            </div>
+
+                            <br>
+                              <div class="clearfix"></div>
+                          </li>
+                        </ul>
+
+                      </div>
+
+
+                      <div class="form-group is-empty">
+                          <label class="control-label">Say something ...</label>
+                          <input (keydown.enter)="addPost()" [(ngModel)]="chatMessage" type="text" class="form-control" >
+                          <button class="btn btn-simple" (click)="addPost()"><i class="material-icons">send</i></button>
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

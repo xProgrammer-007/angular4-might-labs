@@ -1,0 +1,27 @@
+<div class="header header-filter" #bg style="background-image: url('../../../assets/img/aang.jpg');">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12 content">
+            <h2 class="title">{{git.title}}.</h2>
+            <br />
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="main main-raised">
+    <div class="intro">
+      <div class="img-container" [ngStyle]="{'background-image':'url('+ git.photourl +')'}"></div>
+      <label id = "user">Posted by <b>{{git.username}}</b> <br>{{git.timeStamp | date:'full'}}</label>
+      <div class="btn-thumbs">
+        <label>Votes</label>
+        <button (click)="hearts(git.$key,git.uid,git.hearts)" class="btn btn-circle btn-simple btn-just-icon btn-raised"><i class="material-icons">thumb_up</i>&nbsp;&nbsp;{{git.hearts}}</button>
+      </div>
+    </div>
+    <div class="" style="clear:both;"></div>
+    <div class="section ctr">
+      <h5>{{git.body}}</h5>
+    </div>
+
+</div>

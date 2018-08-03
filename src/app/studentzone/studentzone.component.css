@@ -1,0 +1,23 @@
+i.fa{
+  padding-right: 5px;
+}
+
+.form-group.is-focused .form-control{
+  background-image: linear-gradient(#F44336, #FFC107), linear-gradient(#D2D2D2, #D2D2D2) !important;
+}
+.card-profile .card-avatar, .card-testimonial .card-avatar{
+  box-shadow: idontwant;
+  max-width: 55px;
+}
+
+.card{
+  box-shadow: none;
+}
+
+.card-profile, .card-testimonial {
+    margin-top: 95px;
+    text-align: center;
+}
+.ctr{
+  text-align: center;
+}

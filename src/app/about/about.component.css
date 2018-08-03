@@ -1,0 +1,76 @@
+.bg{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.wrapper > .header{
+    min-height: 300px;
+    background-position: center center;
+    background-size: cover;
+}
+.main{
+    background: #FFFFFF;
+    position: relative;
+    z-index: 3;
+
+}
+.main-raised{
+    margin: -60px 30px 0px;
+    border-radius: $border-radius-base * 2;
+    @include shadow-16dp();
+}
+
+
+h2.title{
+    margin-bottom: $margin-base * 2;
+}
+.description{
+    color: $gray-light;
+}
+
+
+
+// style for the landing page
+.landing-page{
+
+    .header{
+        height: 100vh;
+
+        .container{
+            padding-top: 26vh;
+            color: #FFFFFF;
+        }
+
+        .share{
+            margin-top: 150px;
+        }
+        h1{
+            font-weight: 600;
+        }
+        .title{
+            color: $white-color;
+        }
+    }
+
+    .wrapper{
+        background: #CCCCCC;
+    }
+}
+
+
+
+@media (max-width: 991px){
+    .landing-page .header{
+        height: auto;
+        min-height: 100vh;
+
+        .container{
+            padding-bottom: 70px
+        }
+    }
+}
+.text-center {
+    text-align: center;
+}

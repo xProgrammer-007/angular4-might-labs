@@ -1,0 +1,14 @@
+ul button{
+  display: table;
+  margin: 0 auto;
+}
+ul p{
+  text-align: center;
+}
+
+ul img{
+  max-width: 71px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: table;
+}

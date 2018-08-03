@@ -1,0 +1,55 @@
+.header{
+  margin-top: 70px;
+      color: #fff;
+      min-height: 310px;
+      position: relative;
+      background-size: contain;
+      background-repeat: repeat-x;
+      animation-name: slider;
+      animation-duration: 30s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+}
+
+
+@keyframes slider {
+  0%{
+    background-position: 350px;
+  }
+  100%{
+    background-position: 900px;
+  }
+
+}
+
+.header .content{
+  position: absolute;
+  bottom: 5px;
+  text-shadow: 1px 2px 5px rgba(0,0,0,.5);
+  padding: 36px 19px;
+}
+.nav-pills:not(.nav-pills-icons) > li > a{
+  border-radius: unset !important;
+}
+
+.nav-pills > li > a{
+  border-radius: unset !important;
+}
+
+.goback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.goback i {
+  font-size: 1.42em;
+  color: #fff;
+}
+
+@media(max-width:700px){
+  .header{
+    min-height: 200px !important;
+  }
+}

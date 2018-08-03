@@ -1,0 +1,37 @@
+<div class="header header-filter" #bg style="background-image: url(../../../assets/img/bg4.jpg),linear-gradient(#4a4848,#bdb7b7);">
+  <button [routerLink]="['../../']"  class="btn goback btn-simple btn-just-icon pull-left" ><i class="material-icons">keyboard_backspace</i></button>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12 content">
+            <h2 class="title">{{game.title}}.</h2>
+            <br />
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="main main-raised" *ngIf="showSpinner">
+  <div class="card-content" style="min-height:300px;">
+      <div class="intro">
+        <loading-spinner ></loading-spinner>
+    </div>
+  </div>
+</div>
+
+<div class="main main-raised" [hidden]="showSpinner">
+
+    <div class="intro">
+      <div class="img-container" [ngStyle]="{'background-image':'url('+ game.photourl +')'}"></div>
+      <label id = "user">Posted by <b>{{game.username}}</b> <br>{{game.timeStamp | date:'full'}}</label>
+      <div class="btn-thumbs">
+        <label>Votes</label>
+        <button (click)="hearts(game.uid,game.hearts)" class="btn btn-circle btn-simple btn-just-icon btn-raised"><i class="material-icons">thumb_up</i>&nbsp;&nbsp;{{game.hearts}}</button>
+      </div>
+    </div>
+    <div class="" style="clear:both;"></div>
+      <div class="section ctr" [innerHTML]="game.body | safeHtml">
+
+      </div>
+      <comment-section [community]="'gaming'" [docID]="this.routes.snapshot.params['num']"></comment-section>
+
+</div>

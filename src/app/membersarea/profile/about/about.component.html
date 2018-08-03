@@ -1,0 +1,15 @@
+<div class="asdasd">
+  <h1>ABout</h1>
+</div>
+<div class="content">
+    <h4 class="card-title">
+      <label data-toggle="tooltip" data-placement="left" title="Verified member of Might Labs" *ngIf="userObj.adminRole"><i class="material-icons" id = "admin">verified_user</i></label>
+      &nbsp;&nbsp;
+      <label class="meta">Name:&nbsp;&nbsp;</label>{{userObj.Name}}</h4>
+      <h5><label class="meta">Lives in&nbsp;&nbsp;</label>{{ userObj.City }}</h5>
+      <h5 *ngIf = "userObj.Skills"><label class="meta">Skill(s) :&nbsp;&nbsp;</label>{{ userObj.Skills }}</h5>
+      <h5 *ngIf = "userObj.Hobbies"><label class="meta">Hobbies :&nbsp;&nbsp;</label>{{ userObj.Hobbies }}</h5>
+      <h5 *ngIf = "userObj.Web" id="web"><label class="meta">Website(s) :&nbsp;&nbsp;</label>{{ userObj.Web }}</h5>
+    <h5>About member</h5>
+    <p>{{ userObj.Desc }}</p>
+</div>

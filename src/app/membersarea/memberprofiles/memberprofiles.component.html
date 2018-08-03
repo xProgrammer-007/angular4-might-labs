@@ -1,0 +1,44 @@
+
+
+
+<div class="tab-content">
+
+
+  <div class="container-fluid">
+    <div class="row" *ngIf="!loaded">
+      <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row" *ngIf="loaded">
+      <div class="container">
+        <div class="card card-content">
+          <div class="row">
+            <div *ngFor="let member of members | async">
+              <div class="col-md-2 col-sm-4" >
+                <div class="align">
+
+
+                <div class="card-avatar">
+                    <a href="#pablo" [routerLink] = "['/member', member.memberuid]">
+                        <img class="img" [src]="member.memberphoto || '../../../assets/img/user.png'" />
+
+                    </a>
+                </div>
+
+                    <h4 class="card-title"><label data-toggle="tooltip" data-placement="left" title="Verified member of Might Labs" *ngIf="member.adminRole === true"><i class="material-icons" id = "admin">verified_user</i></label>{{member.membername}}</h4>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>

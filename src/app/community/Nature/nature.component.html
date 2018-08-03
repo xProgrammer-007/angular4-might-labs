@@ -1,0 +1,41 @@
+
+
+  <div class="header header-filter" #bg style="background-image: url('../../../../assets/img/nature.jpg');">
+    <button [routerLink]="['../']"  class="btn goback btn-simple btn-just-icon pull-left" ><i class="material-icons">keyboard_backspace</i></button>
+
+     <div class="container">
+        <div class="row">
+           <div class="col-md-12 content">
+             <h1 class="title hidden-xs">Meditation & Nature</h1>
+              <h3 class="title">Explore the true self aspirants !</h3>
+              <br />
+           </div>
+        </div>
+     </div>
+  </div>
+
+  <ul class="nav nav-pills nav-pills-primary" role="tablist">
+  <li class="active">
+    <a href="javascript:void(0)" role="tab" >
+      <i class="material-icons">swap_vert</i>
+      New posts
+    </a>
+  </li>
+  <li >
+    <a href="#schedule" role="tab" >
+      <i class="material-icons">view_list</i>
+      References
+    </a>
+  </li>
+  <li>
+    <a class="pull-right" href="#tasks" role="tab"  [routerLink]="['./create']">
+      <i class="material-icons">playlist_add</i>
+      Create Post
+    </a>
+  </li>
+</ul>
+
+
+  <div class="card card-content">
+    <nature-posts-list [limit]="0" [routeLink]="''"></nature-posts-list>
+  </div>

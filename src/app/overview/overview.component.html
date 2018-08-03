@@ -1,0 +1,21 @@
+
+
+
+<div class="main-content">
+  <div class="card">
+      <div class="card-header" data-background-color="red">
+          <h4 class="title">New posts</h4>
+          <p class="category">Active posts from community</p>
+      </div>
+      <div class="card-content">
+          <dev-posts-list [limit]="2" [routeLink]="routePathDev"></dev-posts-list>
+          <exploit-posts-list [limit]="2" [routeLink]="routePathExp"></exploit-posts-list>
+          <game-posts-list [limit]="2" [routeLink]="routePathGame"></game-posts-list>
+          <mechanical-posts-list [limit]="2" [routeLink]="routePathMecha"></mechanical-posts-list>
+          <nature-posts-list [limit]="2" [routeLink]="routePathNat"></nature-posts-list>
+          <technology-posts-list [limit]="2" [routeLink]="routePathTech"></technology-posts-list>
+
+      </div>
+
+  </div>
+</div>

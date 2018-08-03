@@ -1,0 +1,39 @@
+
+                  <div class="card-content">
+                    <div class="row" *ngIf="showSpinner">
+                      <div class="col-md-12">
+                        <animated-post></animated-post>
+                      </div>
+                    </div>
+                    <div class="row">
+
+                      <div *ngFor="let technology of technologys | async" class=" col-md-6">
+
+                          <div class="card" >
+                              <a [routerLink] = "[routeLink+'post',technology.$key]" href="javascript:void(0)">
+                            <div class="card-header card-chart card-bg" data-background-color="post" [ngStyle]="{'background-image':'url('+ instrImg(technology.body) +')'}" >
+                                <div class="ct-chart" id="pie1"></div>
+                            </div>
+
+                            <div class="card-content">
+                              <div class="img-container" [ngStyle]="{'background-image':'url('+ technology.photourl +')'}"></div>
+                                <h4 class="title">{{technology.title}}</h4>
+                                <p class="category">
+                                  {{ (technology.body.length>50)? (technology.body | slice:0:50)+'..':(technology.body) }}
+                                </p>
+                            </div>
+                          </a>
+                            <div class="card-footer">
+                                <div class="stats pull-left">
+                                    <i class="material-icons">person</i> posted by {{technology.username}}
+                                </div>
+                                <div class="btn-thumbs">
+                                  <button (click)="hearts(technology.$key,technology.uid,technology.hearts)" class="btn btn-circle btn-simple btn-just-icon btn-raised"><i class="material-icons">thumb_up</i>&nbsp;{{technology.hearts}}</button>
+                                </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+
+                      </div>

@@ -1,0 +1,37 @@
+<div class="main-content">
+  <button class="btn btn-primary btn-simple goback" routerLink="/membersarea"><i class="material-icons">keyboard_backspace</i></button>
+
+  <div class="container-fluid">
+
+        <div class="row" >
+          <div class="col-md-8"  animatedPart *ngIf="!loaded">
+            <app-animated></app-animated>
+          </div>
+          <div class="col-md-8" contentPart *ngIf="loaded">
+            <div class="card card-profile">
+                <div class="card-avatar">
+                    <a href="#pablo">
+                        <img class="img" [src]="userObj.Photo || '../../../assets/img/user.png'" />
+                    </a>
+                </div>
+
+                <div class="content">
+                    <h4 class="card-title">
+                      <label data-toggle="tooltip" data-placement="left" title="Verified member of Might Labs" *ngIf="userObj.adminRole"><i class="material-icons" id = "admin">verified_user</i></label>
+                      &nbsp;&nbsp;
+                      <label class="meta">Name:&nbsp;&nbsp;</label>{{userObj.Name}}</h4>
+                      <h5><label class="meta">Lives in&nbsp;&nbsp;</label>{{ userObj.City }}</h5>
+                      <h5 *ngIf = "userObj.Skills"><label class="meta">Skill(s) :&nbsp;&nbsp;</label>{{ userObj.Skills }}</h5>
+                      <h5 *ngIf = "userObj.Hobbies"><label class="meta">Hobbies :&nbsp;&nbsp;</label>{{ userObj.Hobbies }}</h5>
+                      <h5 *ngIf = "userObj.Web" id="web"><label class="meta">Website(s) :&nbsp;&nbsp;</label>{{ userObj.Web }}</h5>
+                    <h5>About member</h5>
+                    <p>{{ userObj.Desc }}</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+
+          </div>
+        </div>
+  </div>
+</div>

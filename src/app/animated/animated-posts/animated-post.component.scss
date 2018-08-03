@@ -1,0 +1,118 @@
+
+
+div.content{
+  height: 255px;
+  position: relative;
+  background: #fff;
+}
+
+.squared_image i{
+  font-size: 11em;
+  color: #eeeeee;
+  margin: 0 auto;
+  display: table;
+}
+
+
+.animation_wrapper{
+  background: #fff;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+
+.animated_background{
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8% , #dddddd 18% , #eeeeee 33%);
+  position: relative;
+  height: 84px;
+  background-size: 1000px 1px;
+  animation-name:shimmer;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+
+.background-mask{
+  position: absolute;
+  background: #fff;
+}
+
+.animated_background .header-top{
+  left: 12%;
+  height: 10px;
+  top: 0;
+  right:0;
+}
+
+.animated_background .header-left , .animated_background .header-right{
+  top: 10px;
+  height: 8px;
+}
+
+.animated_background .header-left{
+  left: 12%;
+  width: 15px;
+}
+
+
+.animated_background .header-right{right: 0;width: 47%;}
+
+
+.animated_background .header-bottom{
+  top: 40px;
+  left: 0;
+  right:0;
+  height: 10px;
+}
+
+
+.animated_background .subheader-left, .animated_background .subheader-right{
+  top: 18px;
+  height: 14px;
+}
+
+.animated_background .subheader-left{
+    left: 14%;
+    width: 15px;
+}
+.animated_background .subheader-right{
+  right: 0;
+  width: 88%;
+}
+.animated_background .bottom-right , .animated_background .bottom-left {
+  top: 28px;
+  height: 12px;
+}
+.animated_background .bottom-left{
+  left: 12%;
+  width: 15px;
+}
+.animated_background .bottom-right{
+  width: 62%;
+  right: 0;
+}
+
+.animated_background .header-bottom-1{
+  top: 58px;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+.animated_background .header-bottom-2{
+  top: 76px;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+@keyframes shimmer {
+    0%{
+      background-position: -468px 0;
+    }
+    100%{
+      background-position: 468px 0;
+    }
+}

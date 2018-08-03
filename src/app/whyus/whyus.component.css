@@ -1,0 +1,12 @@
+.card-profile .card-avatar, .card-testimonial .card-avatar{
+  box-shadow: idontwant;
+  max-width: 55px;
+}
+
+.card-profile, .card-testimonial {
+    margin-top: 95px;
+    text-align: center;
+}
+.ctr{
+  text-align: center;
+}

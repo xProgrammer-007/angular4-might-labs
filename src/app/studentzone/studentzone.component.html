@@ -1,0 +1,335 @@
+<div class="main-content">
+
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header" data-background-color="red">
+                      <h4 class="title">Generation change with realtime data</h4>
+                      <p class="category">lets see how it works with Testimonials</p>
+                  </div>
+                  <div class="card-content">
+                      <div id="studentData">
+                          <div class="title">
+                              <h4 class="ctr">Click on any student to load their live reports ...</h4>
+                          </div>
+                          <div class="col-md-3" *ngFor="let member of members | async" >
+                              <div class="card card-profile">
+                                  <div class="card-avatar">
+                                      <a href="javascript:void(0)" (click)="getGraphed(member.uid)">
+                                          <img class="img" [src]="member.photo || '../../../assets/img/user.png'" />
+                                      </a>
+                                  </div>
+
+                                  <div class="content">
+                                      <h4 class="card-title"><label data-toggle="tooltip" data-placement="left" title="Verified member of Might Labs" *ngIf="member.adminRole === true"><i class="material-icons" id = "admin">verified_user</i></label>{{member.name}}</h4>
+                                    <!--  <h5>Lives in <b>{{member.membercity}}</b></h5>
+                                      <h6>About member</h6>
+                                      <p>{{member.memberdesc}}</p> !-->
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header card-chart" data-background-color="custom">
+                              <div class="ct-chart" id="dailySalesChart"></div>
+                            </div>
+                            <div class="card-content">
+                              <h4>Student marks on subjects of this Month</h4>
+                              <div class="togglebutton">
+                            	<label>
+                                	<input (change)="this.changeType()" type="checkbox" checked="console.log(werwer)">
+                            		Toggle Chart Type
+                            	</label>
+                            </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="card" >
+                      <div class="card-header card-chart bg" style="background-image:url('../../assets/img/relax.jpg')">
+                          <i class="material-icons"></i>
+
+                      </div>
+                      <div class="card-content">
+                          <h4 class="title">Relax & Stress Free</h4>
+                          <p class="category"><span class="material-icons">done_all</span> Easy means of learning . Removes stress from daily student life !</p>
+                      </div>
+                      <div class="card-footer">
+                          <div class="stats">
+                              <i class="material-icons">check_circle</i> Meditation & Relax
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="card" >
+                      <div class="card-header card-chart bg" style="background-image:url('../../assets/img/studdy.jpg')">
+                          <i class="material-icons"></i>
+                      </div>
+                      <div class="card-content">
+                          <h4 class="title">Quality Learning</h4>
+                          <p class="category">Nourished & Empowered with experienced tutors . Build Leadership Qualities</p>
+                      </div>
+                      <div class="card-footer">
+                          <div class="stats">
+                              <i class="material-icons">check_circle</i> Personality Development
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="card" >
+                      <div class="card-header card-chart bg" style="background-image:url('../../assets/img/vids.jpg')">
+                            <i class="material-icons"></i>
+                      </div>
+                      <div class="card-content">
+                          <h4 class="title">Digitized Means</h4>
+                          <p class="category">Use progressive means of globally encouraged digitial learning</p>
+                      </div>
+                      <div class="card-footer">
+                          <div class="stats">
+                              <i class="material-icons">check_circle</i> Internet Aspects covered
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h3 class="title">We're recording your success</h3>
+                        <p class="category">Here is the interesting part . You will monitor your own success and grades . Everything is digitized</p>
+                    </div>
+                    <div class="card-content">
+                      <div class="row">
+
+
+                                      <div class="col-md-6">
+                                          <div class="card" >
+                                              <div class="card-header card-chart" data-background-color="blue">
+                                                  <div class="ct-chart" id="emailsSubscriptionChart"></div>
+                                              </div>
+                                              <div class="card-content">
+                                                  <h4 class="title">Grades throught studing</h4>
+                                                  <p class="category">Monitor grades all the while you study and clear exams</p>
+                                              </div>
+                                              <div class="card-footer">
+                                                  <div class="stats">
+                                                      <i class="material-icons">access_time</i> updated every exam
+                                                  </div>
+                                              </div>
+
+                                          </div>
+                                      </div>
+
+                                      <div class="col-md-6">
+                                          <div class="card" >
+                                              <div class="card-header card-chart" data-background-color="red">
+                                                  <div class="ct-chart" id="completedTasksChart"></div>
+                                              </div>
+                                              <div class="card-content">
+                                                  <h4 class="title">Weekly performance</h4>
+                                                  <p class="category">Check your every week performance . A mirror of your performance .</p>
+                                              </div>
+                                              <div class="card-footer">
+                                                  <div class="stats">
+                                                      <i class="material-icons">access_time</i> updated every week .
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                    </div>
+            </div>
+          </div>
+
+
+      </div>
+</div>
+
+
+<div class="row" *ngIf="false">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header" data-background-color="red">
+              <h4 class="title">For Students who want to take featured tutions</h4>
+              <p class="category">Here is the chart to refer to . Further not only studies but computer teaching as well as Personality Development , Building Leaders from students</p>
+          </div>
+          <div class="card-content table-responsive">
+              <table class="table">
+                  <thead class="text-danger">
+                      <tr>
+                          <th>Standard</th>
+                          <th>Schedule</th>
+                          <th>Stream</th>
+                          <th>Monthly Rate</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Class 10 - Secondary</td>
+                          <td>Evening - 4:00 pm</td>
+                          <td>Cbse</td>
+                          <td class="text-danger"><i class="fa fa-inr"></i>1500</td>
+                      </tr>
+                      <tr>
+                          <td>Minerva Hooper</td>
+                          <td>Curaçao</td>
+                          <td>Sinaai-Waas</td>
+                          <td class="text-danger">$23,789</td>
+                      </tr>
+                      <tr>
+                          <td>Sage Rodriguez</td>
+                          <td>Netherlands</td>
+                          <td>Baileux</td>
+                          <td class="text-danger">$56,142</td>
+                      </tr>
+                      <tr>
+                          <td>Philip Chaney</td>
+                          <td>Korea, South</td>
+                          <td>Overland Park</td>
+                          <td class="text-danger">$38,735</td>
+                      </tr>
+                      <tr>
+                          <td>Doris Greene</td>
+                          <td>Malawi</td>
+                          <td>Feldkirchen in Kärnten</td>
+                          <td class="text-danger">$63,542</td>
+                      </tr>
+                      <tr>
+                          <td>Mason Porter</td>
+                          <td>Chile</td>
+                          <td>Gloucester</td>
+                          <td class="text-danger">$78,615</td>
+                      </tr>
+                  </tbody>
+              </table>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header" data-background-color="red">
+                      <h4 class="title">Enroll yourself now for the beta</h4>
+                      <p class="category">Send a query .</p>
+                  </div>
+                  <div class="card-content">
+                      <form>
+                          <div class="row">
+                              <div class="col-md-4">
+                                  <div class="form-group form-black label-floating is-empty">
+                                      <label class="control-label">Your Name</label>
+                                      <input type="text" class="form-control" >
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="form-group form-black label-floating is-empty">
+                                      <label class="control-label">Contact Number</label>
+                                      <input type="text" class="form-control">
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <label class="control-label">City</label>
+                                    <input type="text" class="form-control" >
+                                </div>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-md-4">
+                                  <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox" name="optionsCheckboxes">
+                                        Maths
+                                      </label>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox" name="optionsCheckboxes">
+                                        Science
+                                      </label>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox" name="optionsCheckboxes">
+                                        Computing
+                                      </label>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-md-8">
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" name="optionsCheckboxes" disabled checked>
+                                      Leadership Qualities + Personality Development
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="col-md-2">
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="optionsRadios">
+                                      Cbse
+                                    </label>
+                                  </div>
+                              </div>
+                              <div class="col-md-2">
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="optionsRadios" checked="true">
+                                      Icse
+                                    </label>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="form-group">
+                                      <label>Additional Message</label>
+                                      <div class="form-group form-black label-floating is-empty">
+                                          <label class="control-label"> Please be brief and start with your class / qualification</label>
+                                          <textarea class="form-control" rows="5"></textarea>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <button type="submit" class="btn btn-danger pull-right">Submit</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="header header-filter" #bg style="background-image: url('../../../assets/img/12.jpg');">
+  <button [routerLink]="['../']"  class="btn goback btn-simple btn-just-icon pull-left" ><i class="material-icons">keyboard_backspace</i></button>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12 content">
+           <h1 class="title hidden-xs">Software/Apps Development</h1>
+            <h3 class="title">Welcome Beloved Future Geniuses!</h3>
+            <br />
+         </div>
+      </div>
+   </div>
+</div>
+
+
+  <ul class="nav nav-pills nav-pills-primary" role="tablist">
+  <li class="active">
+    <a href="javascript:void(0)" role="tab" >
+      <i class="material-icons">lightbulb_outline</i>
+      New Posts
+    </a>
+  </li>
+  <li >
+    <a href="javascript:void(0)" role="tab" >
+      <i class="material-icons">view_list</i>
+      Dev Languages.
+    </a>
+  </li>
+  <li>
+    <a href="javascript:void(0)" role="tab" >
+      <i class="material-icons">developer_mode</i>
+      Huge Github
+    </a>
+  </li>
+  <li>
+    <a href="javascript:void(0)" role="tab" >
+      <i class="material-icons">library_books</i>
+      Blog/SEO
+    </a>
+  </li>
+
+  <li>
+    <a class="pull-right" href="#tasks" role="tab"  [routerLink]="['./create']">
+      <i class="material-icons">playlist_add</i>
+      Create Post
+    </a>
+  </li>
+</ul>
+
+
+<div class="card card-content">
+  <dev-posts-list [limit]="0" [routeLink]="routePathDev"></dev-posts-list>
+</div>

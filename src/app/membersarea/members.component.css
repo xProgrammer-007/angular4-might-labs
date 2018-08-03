@@ -1,0 +1,11 @@
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #e9423e;
+}
+
+.tab-content{
+  margin-top: 71px;
+}
+
+.mat-tab-body-content{
+  margin-top: 70px !important;
+}

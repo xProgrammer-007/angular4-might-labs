@@ -1,0 +1,41 @@
+.card {
+  margin-bottom: 10px;
+  padding: 10px;
+  clear: left;
+}
+.img-container{
+  padding: 28px;
+  margin: 0 15px 0 0;
+  background: #d5d8d8ad;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  box-shadow: 1px 2px 10px #999999;
+  border-radius: 50%;
+}
+.card-bg{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn-thumbs{
+  position: absolute;
+right: 0;
+bottom: -9px;
+}
+.btn-thumbs .material-icons{
+  font-size: 21px;
+}
+
+.card a{
+  color: #7b7a7a;
+    font-weight: 500;
+}
+.card h4{
+  font-weight: 400;
+}
+
+.card .card-content {
+    padding: 15px 3px;
+    background: #fff;
+    min-height: 160px;
+}

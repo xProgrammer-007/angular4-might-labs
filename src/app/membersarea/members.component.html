@@ -1,0 +1,96 @@
+
+
+<mat-tab-group class="tab-content">
+  <mat-tab label="About me">
+    <div class="main-content">
+      <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-4">
+            <div class="card card-profile" *ngIf="authService.user | async as user">
+                <div class="card-avatar">
+                    <a href="#pablo">
+                        <img class="img" [src]="user.photoURL || '../../../assets/img/user.png'" />
+                    </a>
+                </div>
+
+                <div class="content">
+                    <h6 class="category text-gray"> Welcome !</h6>
+                    <h4 class="card-title">{{user.displayName}}</h4>
+                    <p>{{user.email}}</p>
+                </div>
+                <!--<button class="btn btn-warning" (click)="callStatsReg(user.uid ,user.displayName,user.photoURL)">Register</button>
+                <button class="btn btn-warning" (click)="callStatsCheck(user.uid)">Check</button>!-->
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                    <h4 class="title">About Yourself</h4>
+                    <p class="category">Complete your profile</p>
+                </div>
+                <div class="card-content">
+                    <form [formGroup]="userForm" (ngSubmit)="formSubmit($event)" novalidate>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-black is-empty">
+                                    <label class="control-label">City</label>
+                                    <input formControlName="city" type="text" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group form-black is-empty">
+                                    <label class="control-label">School/College</label>
+                                    <input formControlName="org" type="text" class="form-control" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-black is-empty">
+                                    <label class="control-label">Skills</label>
+                                    <input formControlName="skills" type="text" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-black is-empty">
+                                    <label class="control-label">Hobbies</label>
+                                    <input formControlName="hobbies" type="text" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-black is-empty">
+                                    <label class="control-label">Website/Blog links</label>
+                                    <input formControlName="web" type="text" class="form-control" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="form-group form-black  is-empty">
+                                        <label class="control-label">Give a short description about yourself</label>
+                                        <textarea formControlName = "description" class="form-control" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                      <label style="margin: 0 auto;position: relative;top: 19px;" *ngIf = "member">
+                        <i class="material-icons" style="vertical-align:middle;">restore</i>
+                        <span> {{member.time | date: 'medium'}} </span>
+                      </label><button type="submit" class="btn btn-danger pull-right">Update Profile</button>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+      </div>
+      </div>
+  </div>
+  </mat-tab>
+  <mat-tab label="Members & Chat">
+    <app-memberprofiles></app-memberprofiles>
+  </mat-tab>
+</mat-tab-group>

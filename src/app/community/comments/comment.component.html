@@ -1,0 +1,30 @@
+<div class="card-content">
+  <div class="comment-contents">
+    <h4 >Comments<i class="material-icons">forum</i></h4>
+    <div class="form-group is-empty">
+        <label class="control-label">Post a comment</label>
+        <input (keydown.enter)="addComment()" [(ngModel)]="CommentValue" type="text" class="form-control" >
+        <button class="btn btn-simple" (click)="addComment()"><i class="material-icons">send</i></button>
+
+    </div>
+    <label *ngIf="!comments">No comments to display , post a comment</label>
+
+    <ul *ngFor="let comment of comments | async">
+      <li>
+        <div class="content">
+          <img class="img-circle" style="" [src]="comment.userPhoto ||'../../assets/img/user.png'" />
+        <span>{{comment.username}}</span>
+          <span id="time">{{comment.timeStamp | date: 'medium'}}</span>
+          <p>{{ comment.commentVal}}</p>
+        </div>
+
+        <br>
+          <div class="clearfix"></div>
+      </li>
+    </ul>
+
+  </div>
+
+
+
+</div>

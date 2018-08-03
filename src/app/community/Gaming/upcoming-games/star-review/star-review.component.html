@@ -1,0 +1,27 @@
+<h3>Average Rating</h3>
+<b class="label label-success">{{ avgRating | async }}</b> / 5
+<h3>Reviews</h3>
+<div *ngFor="let star of stars | async">
+  <a href="#">{{ star.user }}</a> gave  {{ star.name }} <b>{{ star.value }}</b> stars
+</div>
+<h3>Post your Review</h3>
+<fieldset class="rating">
+  <ng-container  *ngFor="let num of [5, 4, 3, 2, 1]">
+      <!-- full star -->
+      <input (click)="starHandler(num,gameId)"
+            [id]="gameId+'-star'+num"
+            [value]="num-0.5"
+            [name]="'rating-' + gameId"
+            [class]="gameId + '-star'+num"
+            type="radio" />
+      <label class="full" [for]="gameId+'-star'+num"></label>
+      <!-- half star -->
+      <input (click)="starHandler(num-0.5,gameId)"
+             [value]="num-0.5"
+             [id]="gameId+'-halfstar'+num"
+             [class]="gameId + '-halfstar'+num"
+              [name]="'rating-' + gameId"
+             type="radio"  />
+      <label class="half" [for]="gameId+'-halfstar'+num"></label>
+  </ng-container>
+</fieldset>

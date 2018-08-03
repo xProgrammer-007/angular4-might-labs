@@ -1,0 +1,77 @@
+.form-group button{
+  position: absolute;
+  right: -20px;
+  top: 10px;
+}
+.form-group i{
+  font-size: 2em;
+}
+ul{
+  list-style-type: none;
+      padding: 6px 0px;
+      margin: 0;
+      border-bottom: 1px solid #eee;
+}
+ul li{
+  margin: 8px 13px;
+}
+ul li img{
+  width:45px;
+  float: left;
+  margin-top: 10px;
+}
+
+ul li p{
+  position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+ul li span{
+  position: relative;
+    top: 8px;
+    left: 20px;
+    font-weight: bold;
+    color: #797979;
+}
+.clearfix{
+  clear: both;
+}
+
+ul li span#time{
+  //float: right;
+    position: relative;
+  //  left: 0;
+  //  top: 26px;
+  font-size: smaller;
+    font-weight: normal;
+}
+
+
+.comment-contents h4 i{
+  vertical-align: middle;
+    margin: 10px;
+    font-size: 2em;
+    color: #FF5722;
+}
+
+.main-content{
+  margin-top: 30px;
+}
+
+input.form-control{
+  width: 87%;
+}
+
+.form-group{
+  margin:10px 0px 0px 12px;
+ button{
+  position: absolute;
+    top: 15px;
+    margin:10px 0px 0px 12px;
+    right: 0;
+    i{
+      font-size: 2em;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-plain">
+                    <div class="card-header" data-background-color="red">
+                        <button routerLink="/git/create"  class="btn btn-white btn-round btn-just-icon pull-right" ><i class="material-icons">add</i></button>
+
+                        <h4 class="title">Github for Submitting concepts & ideas</h4>
+                        <p class="category">You can submit what you are working on , or would like to share in the community . CLick the plus logo to create</p>
+                    </div>
+                  <div class="card-content">
+                    <div class="row" *ngIf="showSpinner">
+                      <div class="col-md-12">
+                        <loading-spinner ></loading-spinner>
+                      </div>
+                    </div>
+                    <div class="row">
+
+                      <div *ngFor="let git of gits | async" class=" col-md-6">
+
+                          <div class="card" >
+                              <a [routerLink] = "['id',git.$key]" href="javascript:void(0)">
+                            <div class="card-header card-chart card-bg" data-background-color="post" style="background-image:url(../../../../assets/img/dash.jpg)">
+                                <div class="ct-chart" id="pie1"></div>
+                            </div>
+
+                            <div class="card-content">
+                              <div class="img-container" [ngStyle]="{'background-image':'url('+ git.photourl +')'}"></div>
+                                <h4 class="title">{{git.title}}</h4>
+                                <p class="category">
+                                  {{ (git.body.length>50)? (git.body | slice:0:50)+'..':(git.body) }}
+                                </p>
+                            </div>
+                          </a>
+                            <div class="card-footer">
+                                <div class="stats pull-left">
+                                    <i class="material-icons">person</i> posted by {{git.username}}
+                                </div>
+                                <div class="btn-thumbs">
+                                  <button (click)="hearts(git.$key,git.uid,git.hearts)" class="btn btn-circle btn-simple btn-just-icon btn-raised"><i class="material-icons">thumb_up</i>&nbsp;{{git.hearts}}</button>
+                                </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<git-detail [git]='git'></git-detail>!-->

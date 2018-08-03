@@ -1,0 +1,44 @@
+
+                  <div class="card-content">
+                    <div class="row" *ngIf="showSpinner">
+                      <div class="col-md-12">
+                        <loading-spinner ></loading-spinner>
+                      </div>
+                    </div>
+
+                <div class="row" *ngFor="let game of games | async" >
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-7">
+
+                              <div class="card-header card-bg" data-background-color="post" [ngStyle]="{'background-image':'url('+ game.image +')'}" ></div>
+
+                          <div class="card-content">
+                              <p class="category">
+                                {{ game.desc }}
+                              </p>
+                          </div>
+                        </div>
+
+                        <div class="col-md-5">
+                          <div class="card-footer">
+                              <div class="stats ">
+                                <h2>{{game.name}}</h2>
+                                <star-review [gameId]="game.$key" [userId]="this.userUid" [user]="this.userName" [name]="game.name" ></star-review>
+                                <br>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="card-content">
+                          <label>Tags:&nbsp;&nbsp;</label>
+                          <span *ngFor = "let tag of game.tags.split(',')" style="font-size:0.8em;font-weight:700;">
+                            <a href="http://www.google.com/search?q={{tag}} pc games">{{tag}}</a> , 
+                          </span>
+                      </div>
+                      <hr class="small">
+                    </div>
+
+                </div>

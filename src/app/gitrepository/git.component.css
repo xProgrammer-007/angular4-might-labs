@@ -1,0 +1,4 @@
+.card [data-background-color="post"] {
+  background: linear-gradient(60deg, #c7c4c4, #8a898a);
+  box-shadow: 0 12px 20px -10px rgba(105, 103, 103, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(150, 146, 146, 0.2);
+}

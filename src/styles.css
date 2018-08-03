@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/social-font.css';
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #e94340;
+}
+i.material-icons{
+ display: none;
+}
+
+code{
+  white-space: pre-wrap;
+    font-size: small;
+    line-height: 1px !important;
+    word-spacing: 0px;
+}
+
+.mat-tab-body-content{
+  overflow: inherit !important;
+}
+
+@media(max-width:768px){
+  .main-panel .main-content{
+    padding: 8px 0px;
+  }
+}

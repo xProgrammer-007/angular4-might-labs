@@ -1,0 +1,22 @@
+.login-social button{
+  min-width: 100%;
+  position: relative;
+  color:#fff;
+}
+.login-social button span{
+  font-size: 2em;
+position: absolute;
+left: 9%;
+top: 50%;
+transform: translate(-50%,-50%);
+}
+#twitter{
+  background: #55acee;
+}
+#facebook{
+  background: #405499;
+}
+#google{
+  background:#fff;
+  color: #000;
+}

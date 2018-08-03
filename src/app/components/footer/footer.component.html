@@ -1,0 +1,26 @@
+<footer>
+    <div class="container-fluid">
+        <nav class="pull-left">
+            <ul>
+                <li>
+                    <a href="#" [routerLink]="['/overview']">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#" [routerLink]="['/community']">
+                        Community
+                    </a>
+                </li>
+                <li>
+                    <a href="#" [routerLink]="['/about']">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p class="copyright pull-right">
+            &copy; {{test | date: 'yyyy'}} <a href="http://mightlabs.org">Might Labs </a>
+        </p>
+    </div>
+</footer>

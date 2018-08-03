@@ -1,0 +1,131 @@
+@media(max-width:600px){
+	.animated_background{
+		height: 300px !important;
+	}
+
+}
+.animation_wrapper{
+  min-height: 206px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.animated_background{
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8% , #dddddd 18% , #eeeeee 33%);
+  position: relative;
+  height: 200px;
+  background-size: 1000px 1px;
+  animation-name:shimmer;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+
+.background-mask{
+  position: absolute;
+  background: #fff;
+}
+
+.animated_background .header-top{
+  left: 0;
+  height: 10px;
+  top: 0;
+  right:0;
+}
+
+.animated_background .header-left , .animated_background .header-right{
+  top: 10px;
+  height: 8px;
+}
+
+.animated_background .header-left{
+  left: 0;
+  /* width: 15px; */
+}
+
+
+.animated_background .header-right{right: 0;width: 78%;}
+
+
+.animated_background .header-bottom{
+  top: 40px;
+  left: 0;
+  right:0;
+  height: 10px;
+}
+
+
+.animated_background .subheader-left, .animated_background .subheader-right{
+  top: 18px;
+  height: 14px;
+}
+
+.animated_background .subheader-left{
+    right: 0;
+    left: 0;
+}
+.animated_background .subheader-right{
+  right: 0;
+  width: 88%;
+}
+.animated_background .bottom-right , .animated_background .bottom-left {
+  top: 28px;
+  height: 12px;
+}
+.animated_background .bottom-left{
+  /* left: 12%; */
+  /* width: 15px; */
+}
+.animated_background .bottom-right{
+  width: 62%;
+  right: 0;
+}
+
+@keyframes shimmer {
+    0%{
+      background-position: -468px 0;
+    }
+    100%{
+      background-position: 468px 0;
+    }
+}
+
+.card-profile, .card-testimonial {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 3px;
+    color: rgba(0,0,0, 0.87);
+    background: #fff;
+}
+
+.card-profile .card-avatar, .card-testimonial .card-avatar {
+	background: #e4e4e4;
+    max-width: 130px;
+    max-height: 130px;
+    margin: -50px auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.card-profile .card-avatar + .content, .card-testimonial .card-avatar + .content {
+    padding: 11px;
+}
+.card-profile .card-avatar + .content, .card-testimonial .card-avatar + .content {
+    margin-top: 15px;
+}
+
+.card-avatar i{
+	font-size: 9em;
+  color: #c1c1c1;
+}
